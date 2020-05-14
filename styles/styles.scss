@@ -1,0 +1,155 @@
+@import "./mixins";
+
+$app-color: #333;
+$font-color: #fff;
+$header-color: #fff159;
+$bg-base: #fff;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
+    Roboto, Arial, sans-serif, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background: #ebebeb;
+  color: #000;
+  //Lazy loading
+  .lazy-loading {
+    transition: 0.5s filter ease-in;
+    filter: blur(0);
+  }
+
+  .blurred {
+    filter: blur(0.2em);
+  }
+}
+
+header {
+  background-color: $header-color;
+  padding: 10px;
+  .search-content {
+    @include lg {
+      min-height: 48px;
+      width: 50%;
+    }
+    margin: 0 auto;
+    .logo-content {
+      .logo-header {
+        height: 32px;
+        width: 44px;
+      }
+    }
+
+    .input-search {
+      font-size: 1em;
+      height: 100%;
+      padding: 7px 15px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .search-button {
+      width: 50px;
+      height: 100%;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+      border: none;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+      margin-left: -8px;
+    }
+  }
+}
+
+main {
+  @include lg {
+    width: 50%;
+    padding: 10px 0;
+  }
+
+  margin: 0 auto;
+  padding: 10px;
+
+  .breadcrumb {
+    padding: 10px 0;
+  }
+
+  .list-items {
+    padding: 10px;
+    background: $bg-base;
+  }
+
+  .item {
+    padding: 10px;
+    border-bottom: 1px solid #ebebeb;
+
+    @include lg {
+      grid-template-columns: 150px 1fr 150px;
+    }
+
+    .item-thumbnails {
+      width: 100px;
+      @include lg {
+        width: 150px;
+      }
+    }
+
+    .item-price {
+      font-size: 1.5em;
+      padding-top: 10px;
+      @include lg {
+        padding-top: 20px;
+      }
+    }
+
+    .bullet {
+      margin-left: 15px;
+      width: 14px;
+      height: 14px;
+      border-radius: 15px;
+      background-color: #04c104;
+      display: inline-flex;
+    }
+
+    .item-title {
+      font-size: 16px;
+      padding-top: 10px;
+      @include lg {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  .internal-item {
+    @include lg {
+      padding: 10px;
+    }
+    background: $bg-base;
+    .internal-item-grid {
+      @include lg {
+        grid-template-columns: 70% 30%;
+      }
+      .internal-item-title {
+        font-size: 24px;
+        @include lg {
+          padding-top: 10px;
+        }
+      }
+
+      .internal-item-price {
+        font-size: 36px;
+        @include lg {
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}

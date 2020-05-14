@@ -1,0 +1,36 @@
+{
+  "name": "mercadolibre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "node server.js",
+    "start-static": "next build && next start",
+    "export": "next build && next export"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damian-gianni/mercadolibre.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damian-gianni/mercadolibre/issues"
+  },
+  "homepage": "https://github.com/damian-gianni/mercadolibre#readme",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "express": "^4.17.1",
+    "next": "^9.4.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "styled-components": "^4.3.2",
+    "styled-css-grid": "^1.2.1"
+  }
+}
