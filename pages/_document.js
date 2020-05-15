@@ -33,13 +33,10 @@ class MyDocument extends Document {
           <meta name="author" content="Damian Gianni" />
           {/* PWA primary color */}
           <meta name="theme-color" content="#000" />
-          <script src="/static/getParams.js" />
         </Head>
         <body>
           <Main />
           <NextScript />
-          {/* Lazy loading images */}
-          <script src="/static/js/lazy-load-images.min.js" />
         </body>
       </Html>
     );

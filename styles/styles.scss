@@ -17,14 +17,9 @@ body {
   padding: 0;
   background: #ebebeb;
   color: #000;
-  //Lazy loading
-  .lazy-loading {
-    transition: 0.5s filter ease-in;
-    filter: blur(0);
-  }
 
-  .blurred {
-    filter: blur(0.2em);
+  p {
+    overflow-wrap: break-word;
   }
 }
 
@@ -88,6 +83,7 @@ main {
   }
 
   .item {
+    cursor: pointer;
     padding: 10px;
     border-bottom: 1px solid #ebebeb;
 
@@ -140,15 +136,23 @@ main {
       .internal-item-title {
         font-size: 24px;
         @include lg {
-          padding-top: 10px;
+          padding: 10px 0;
         }
       }
 
       .internal-item-price {
         font-size: 36px;
         @include lg {
-          padding-top: 20px;
+          padding: 20px 0;
         }
+      }
+
+      .internal-item-image {
+        max-width: 100%;
+      }
+
+      .internal-item-description {
+        padding: 10px;
       }
     }
   }
